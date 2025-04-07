@@ -123,19 +123,39 @@ function isPalindrome(text){
     let lower = text.toLowerCase()
     let split = lower.split("")
     let reverse = split.reverse()
-    let join = reverse.join()
+    let join = reverse.join("")
+    let reversed = lower.split("").reverse().join("") //permet de retirer les "undefined" des résultats de la console
+    return lower===reversed //permet de retirer les "undefined" des résultats de la console
 
-    if (text === join){
-        console.log("true")
+
+    if (lower === join){
+        console.log(true)
     }
     else {
-        console.log("false")
+        console.log(false)
     }
-    
 }
 
-//console.log(isPalindrome("racecar"));  // true
-//console.log(isPalindrome("level"));    // true
-//console.log(isPalindrome("hello"));    // false
-//console.log(isPalindrome("Kayak"));    // true (insensible à la casse)
-//console.log(isPalindrome("Aibohphobia")); // true (un vrai mot palindrome 😆)
+// console.log(isPalindrome("racecar"));  // true
+// console.log(isPalindrome("level"));    // true
+// console.log(isPalindrome("hello"));    // false
+// console.log(isPalindrome("Kayak"));    // true (insensible à la casse)
+// console.log(isPalindrome("Aibohphobia")); // true (un vrai mot palindrome 😆)
+
+
+////////////////////////////
+//💥 Mission 7 : Compter les voyelles
+// Créer une fonction countVowels qui prend une chaîne de caractères en argument et retourne le nombre de voyelles qu'elle contient.
+// Les voyelles sont : a, e, i, o, u, y (et on ne tient pas compte de la casse).
+function countVowels(txt){
+    let lower = txt.toLowerCase()
+    for (let i=0; i<txt.length; i++){
+        
+    }
+}
+
+console.log(countVowels("Hello"));         // 2 ("e" et "o")
+console.log(countVowels("JavaScript"));    // 3 ("a", "a", "i")
+console.log(countVowels("Rhythm"));        // 0
+console.log(countVowels("AEIOUY"));        // 6
+console.log(countVowels("Bonjour à tous")); // 6 (compte aussi les voyelles accentuées si tu veux bonus)
