@@ -10,7 +10,7 @@ function greet(name = "inconnu") {
 
 
 //////////////////
-//Objectif : Écrire une fonction isEven qui prend un nombre en argument et retourne :
+//Objectif : Écrire une fonction isEven qui prend un nombre en argument et retourne : Pair ou Impair
 function isEven (number){
     if (number % 2 ===0){
         return "Pair"
